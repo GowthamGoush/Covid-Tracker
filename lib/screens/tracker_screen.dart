@@ -1,4 +1,5 @@
 import 'package:covid_tracker_app/models/covid_data_model.dart';
+import 'package:covid_tracker_app/utils/constants.dart';
 import 'package:covid_tracker_app/widgets/delegate_persistent_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,13 +17,6 @@ class TrackerScreen extends StatefulWidget {
 
 class TrackerScreenState extends State<TrackerScreen> {
   bool isState = false;
-  var currentSelectedValue;
-
-  void changeToState() {
-    setState(() {
-      isState = !isState;
-    });
-  }
 
   String convertToString(int value) {
     String convertedString;
@@ -39,6 +33,14 @@ class TrackerScreenState extends State<TrackerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            isState = !isState;
+          });
+        },
+        child: Icon(Icons.sync),
+      ),
       body: SafeArea(
         child: CustomScrollView(
           physics: const BouncingScrollPhysics(),
@@ -49,45 +51,11 @@ class TrackerScreenState extends State<TrackerScreen> {
               floating: false,
               pinned: false,
               backgroundColor: Colors.white,
-              actions: [
-                DropdownButtonHideUnderline(
-                  child: DropdownButton<String>(
-                    items: <String>['City', 'State/UT'].map((String value) {
-                      currentSelectedValue = value;
-
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(
-                          value,
-                          style: TextStyle(color: Colors.black),
-                        ),
-                      );
-                    }).toList(),
-                    onChanged: (newValue) {
-                      currentSelectedValue = newValue;
-
-                      if ((newValue == 'State/UT' && !isState) ||
-                          (newValue == 'City' && isState)) changeToState();
-                    },
-                  ),
-                ),
-              ],
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
-                title: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    const Text(
-                      'Covid-19 Tracker',
-                      style: TextStyle(color: Colors.white, fontSize: 16.0),
-                      textAlign: TextAlign.end,
-                    ),
-                  ],
-                ),
+                title: appBarTitle,
                 background: Image.asset(
-                  'assets/images/tracker_screen_background.png',
+                  'assets/images/appbar_background.png',
                   fit: BoxFit.cover,
                 ),
               ),
