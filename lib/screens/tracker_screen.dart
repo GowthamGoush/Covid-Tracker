@@ -39,7 +39,10 @@ class TrackerScreenState extends State<TrackerScreen> {
             isState = !isState;
           });
         },
-        child: Icon(Icons.sync),
+        child: Icon(
+          Icons.sync,
+        ),
+        backgroundColor: Color(0xFFBAC6F2).withOpacity(0.8),
       ),
       body: SafeArea(
         child: CustomScrollView(
