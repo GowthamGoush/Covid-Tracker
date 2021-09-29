@@ -60,7 +60,7 @@ class LoadingScreenState extends State<LoadingScreen> {
           key, totalActive, totalRecovered, totalConfirmed, totalDeceased));
     });
 
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
       return TrackerScreen(
         covidData: this.cityData,
         stateData: this.stateData,
@@ -80,7 +80,7 @@ class LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       body: SafeArea(
         child: SpinKitChasingDots(
-          color: Colors.red,
+          color: Colors.black12,
           size: 50,
         ),
       ),
