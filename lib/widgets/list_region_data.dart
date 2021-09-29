@@ -36,6 +36,8 @@ class RegionData extends StatelessWidget {
                   districtName,
                   style: TextStyle(
                     color: Colors.black,
+                    fontFamily: 'Spartan',
+                    fontSize: 12,
                     fontWeight:
                         addHeaderDefaults ? FontWeight.bold : FontWeight.normal,
                   ),
@@ -60,6 +62,8 @@ class RegionData extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: addHeaderDefaults ? Colors.red : Colors.black,
+                    fontFamily: 'Spartan',
+                    fontSize: 12,
                     fontWeight:
                         addHeaderDefaults ? FontWeight.bold : FontWeight.normal,
                   ),
@@ -84,6 +88,8 @@ class RegionData extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: addHeaderDefaults ? Colors.blue : Colors.black,
+                    fontFamily: 'Spartan',
+                    fontSize: 12,
                     fontWeight:
                         addHeaderDefaults ? FontWeight.bold : FontWeight.normal,
                   ),
@@ -108,6 +114,8 @@ class RegionData extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: addHeaderDefaults ? Colors.green : Colors.black,
+                    fontFamily: 'Spartan',
+                    fontSize: 12,
                     fontWeight:
                         addHeaderDefaults ? FontWeight.bold : FontWeight.normal,
                   ),
@@ -132,6 +140,8 @@ class RegionData extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: addHeaderDefaults ? Colors.purple : Colors.black,
+                    fontFamily: 'Spartan',
+                    fontSize: 12,
                     fontWeight:
                         addHeaderDefaults ? FontWeight.bold : FontWeight.normal,
                   ),
