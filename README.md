@@ -1,7 +1,16 @@
-# covid_tracker_app
+<h1 align="center"> Covid Tracker </h1>
+<h3 align="center"> A flutter application to tracker current COVID cases across India. </h3>
+---
 
-A new Flutter project.
+<p align="center"> 
+  <img width="360" height="640" src="https://user-images.githubusercontent.com/63305824/136363114-778133fb-8f33-427e-adcc-5fc54076f895.png"/>
+  <img width="360" height="640" src="https://user-images.githubusercontent.com/63305824/136363108-c472a3e8-2c6c-4bb2-891e-6ecba34b6d74.png"/>
+</p>
 
+<!-- ![Screenshot_1632901796_framed](https://user-images.githubusercontent.com/63305824/136363108-c472a3e8-2c6c-4bb2-891e-6ecba34b6d74.png)
+![Screenshot_1632901777_framed](https://user-images.githubusercontent.com/63305824/136363114-778133fb-8f33-427e-adcc-5fc54076f895.png)
+
+ -->
 ## Getting Started
 
 This project is a starting point for a Flutter application.
